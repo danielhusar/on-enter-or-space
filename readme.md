@@ -1,7 +1,6 @@
 # on-enter-or-space
 
- > It will cache the callback and return a function that can be used as event handler for react apps. This can be used with `onKeyDown` or `onKeyUp` events.
-
+ > Execute function for enter and space keyboard events. This is usefull if you want to make your app accessible, and you want to add keyboard navigation to the components that have onClick handlers.
 
 ## Install
 
@@ -16,6 +15,8 @@ yarn add @daniel.husar/on-enter-or-space
 ```
 
 ## Usage with react
+
+First time you call `onEnterOrSpace(callback)` it will return another function, that accepts event object. If the event object was enter or space, it will call the `callback` with event object as parameter.
 
 ```jsx
 import onEnterOrSpace from '@daniel.husar/on-enter-or-space';
@@ -34,8 +35,7 @@ Default: `undefined`
 
 Required: `true`
 
-Function that is passed into the `onEnterOrSpace` and will get called on key down event. This function will receive event object as first parameter.
-
+Function you want to execute when enter or space event was passed in.
 
 ## License
 
